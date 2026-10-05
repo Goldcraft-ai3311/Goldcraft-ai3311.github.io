@@ -1,13 +1,3 @@
-/* =========================================================
-   GOLDCRAFT WEB STUDIO
-   Main JavaScript
-========================================================= */
-
-
-/* =========================================================
-   CURRENT YEAR
-========================================================= */
-
 const yearElement = document.getElementById("year");
 
 if (yearElement) {
@@ -15,9 +5,7 @@ if (yearElement) {
 }
 
 
-/* =========================================================
-   MOBILE MENU
-========================================================= */
+/* MOBILE MENU */
 
 const menuBtn = document.querySelector(".menu-btn");
 const nav = document.querySelector("nav");
@@ -29,7 +17,6 @@ if (menuBtn && nav) {
         const isOpen = nav.classList.toggle("mobile-open");
 
         if (isOpen) {
-
             nav.style.display = "flex";
             nav.style.position = "absolute";
             nav.style.top = "78px";
@@ -40,39 +27,19 @@ if (menuBtn && nav) {
             nav.style.flexDirection = "column";
             nav.style.alignItems = "flex-start";
             nav.style.gap = "18px";
-
         } else {
-
             nav.style.display = "";
-
         }
-
-    });
-
-
-    document.querySelectorAll("nav a").forEach(link => {
-
-        link.addEventListener("click", () => {
-
-            if (window.innerWidth <= 900) {
-
-                nav.classList.remove("mobile-open");
-                nav.style.display = "";
-
-            }
-
-        });
 
     });
 
 }
 
 
-/* =========================================================
-   PACKAGE SELECTION
-========================================================= */
+/* PACKAGE BUTTONS */
 
-const packageButtons = document.querySelectorAll(".package-btn");
+const packageButtons =
+    document.querySelectorAll(".package-btn");
 
 packageButtons.forEach(button => {
 
@@ -84,11 +51,10 @@ packageButtons.forEach(button => {
         const messageField =
             document.querySelector('textarea[name="message"]');
 
-        if (messageField && selectedPackage) {
+        if (messageField) {
 
             messageField.value =
-                `I am interested in the ${selectedPackage} package. ` +
-                `Please tell me more about the package and the next steps.`;
+                `I am interested in the ${selectedPackage} package. Please tell me more about the package and the next steps.`;
 
         }
 
@@ -97,9 +63,7 @@ packageButtons.forEach(button => {
 });
 
 
-/* =========================================================
-   CONTACT FORM
-========================================================= */
+/* CONTACT FORM */
 
 const contactForm =
     document.getElementById("contactForm");
@@ -110,149 +74,85 @@ const formMsg =
 
 if (contactForm) {
 
-    contactForm.addEventListener("submit", function (event) {
+    contactForm.addEventListener("submit", async function (event) {
 
         event.preventDefault();
 
+        const submitButton =
+            this.querySelector('button[type="submit"]');
 
-        const name =
-            this.elements["name"].value.trim();
+        const originalText =
+            submitButton.textContent;
 
-        const email =
-            this.elements["email"].value.trim();
+        submitButton.disabled = true;
+        submitButton.textContent = "Sending...";
 
-        const business =
-            this.elements["business"].value.trim();
-
-        const message =
-            this.elements["message"].value.trim();
+        formMsg.textContent = "";
+        formMsg.className = "";
 
 
-        /* Basic validation */
+        try {
 
-        if (!name || !email || !business || !message) {
+            const formData =
+                new FormData(this);
+
+
+            const response =
+                await fetch("https://api.web3forms.com/submit", {
+
+                    method: "POST",
+
+                    body: formData
+
+                });
+
+
+            const result =
+                await response.json();
+
+
+            if (result.success) {
+
+                formMsg.textContent =
+                    "✓ Thank you! Your project request has been sent successfully. We will contact you soon.";
+
+                formMsg.className =
+                    "form-success";
+
+                this.reset();
+
+            } else {
+
+                throw new Error(
+                    result.message ||
+                    "Something went wrong."
+                );
+
+            }
+
+
+        } catch (error) {
+
+            console.error(error);
 
             formMsg.textContent =
-                "Please complete all fields.";
+                "Sorry, your request could not be sent. Please contact us on WhatsApp or email.";
 
-            formMsg.className = "form-error";
-
-            return;
+            formMsg.className =
+                "form-error";
 
         }
 
 
-        /* Email validation */
-
-        const emailPattern =
-            /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-        if (!emailPattern.test(email)) {
-
-            formMsg.textContent =
-                "Please enter a valid email address.";
-
-            formMsg.className = "form-error";
-
-            return;
-
-        }
-
-
-        /* =================================================
-           WHATSAPP MESSAGE
-        ================================================= */
-
-        const whatsappMessage =
-`Hello GoldCraft Web Studio!
-
-I would like to discuss a website project.
-
-Name: ${name}
-
-Email: ${email}
-
-Business / Website Type:
-${business}
-
-Project Details:
-${message}
-
-I would like to know the price and next steps.`;
-
-
-        const whatsappURL =
-            "https://wa.me/923260936969?text=" +
-            encodeURIComponent(whatsappMessage);
-
-
-        /* =================================================
-           EMAIL MESSAGE
-        ================================================= */
-
-        const emailSubject =
-            `New Website Project Request - ${business}`;
-
-        const emailBody =
-`Hello GoldCraft Web Studio,
-
-I would like to discuss a website project.
-
-Name: ${name}
-Email: ${email}
-Business / Website Type: ${business}
-
-Project Details:
-${message}
-
-Please let me know the price and next steps.
-
-Thank you.`;
-
-
-        const emailURL =
-            "mailto:goldcraftweb@gmail.com" +
-            "?subject=" +
-            encodeURIComponent(emailSubject) +
-            "&body=" +
-            encodeURIComponent(emailBody);
-
-
-        /* =================================================
-           SHOW OPTIONS
-        ================================================= */
-
-        formMsg.innerHTML =
-            `Your project details are ready.<br>
-            <a href="${whatsappURL}"
-               target="_blank"
-               rel="noopener noreferrer"
-               style="color:#25d366;font-weight:700;">
-               → Send through WhatsApp
-            </a>
-            &nbsp;&nbsp;
-            <a href="${emailURL}"
-               style="color:#d7b56a;font-weight:700;">
-               → Send by Email
-            </a>`;
-
-        formMsg.className = "form-success";
-
-
-        /*
-         * We intentionally do NOT reset the form here.
-         * This allows the customer to check their details
-         * before sending them.
-         */
+        submitButton.disabled = false;
+        submitButton.textContent = originalText;
 
     });
 
 }
 
 
-/* =========================================================
-   CLOSE MOBILE MENU WHEN RESIZING
-========================================================= */
+/* MOBILE MENU RESET */
 
 window.addEventListener("resize", () => {
 
