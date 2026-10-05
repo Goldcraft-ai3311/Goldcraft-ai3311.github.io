@@ -1,1 +1,856 @@
-*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{background:#080808;color:#f5f2eb;font-family:Inter,Arial,sans-serif;line-height:1.6}a{text-decoration:none;color:inherit}.nav{height:78px;display:flex;align-items:center;justify-content:space-between;padding:0 7%;border-bottom:1px solid #222;position:sticky;top:0;background:rgba(8,8,8,.9);backdrop-filter:blur(14px);z-index:20}.brand{font-family:"Playfair Display",serif;font-weight:800;font-size:1.35rem;letter-spacing:.3px}.brand span{display:inline-grid;place-items:center;width:30px;height:30px;border:1px solid #c9a45b;border-radius:50%;color:#d7b56a;margin-right:7px;font-size:.95rem}nav{display:flex;gap:30px;align-items:center;font-size:.9rem;color:#bbb}nav a:hover{color:#d7b56a}.nav-cta{border:1px solid #8f6c2f;padding:10px 17px;border-radius:999px;color:#e4c477}.menu-btn{display:none;background:none;border:0;color:#fff;font-size:1.5rem}.hero{min-height:calc(100vh - 78px);padding:90px 7%;display:grid;grid-template-columns:1.08fr .92fr;gap:60px;align-items:center;position:relative;overflow:hidden}.hero-glow{position:absolute;width:550px;height:550px;border-radius:50%;background:#8d682b;filter:blur(140px);opacity:.12;right:-180px;top:40px}.eyebrow{font-size:.72rem;letter-spacing:.2em;color:#caa65b;font-weight:700;margin-bottom:18px}.hero h1{font-family:"Playfair Display",serif;font-size:clamp(3rem,6vw,6.3rem);line-height:1.02;max-width:780px}.hero h1 em{color:#d7b56a;font-style:normal}.hero-copy{max-width:620px;color:#a9a9a9;margin:26px 0 34px;font-size:1.08rem}.hero-actions{display:flex;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;justify-content:center;align-items:center;gap:8px;padding:13px 21px;border-radius:7px;font-weight:700;font-size:.88rem;cursor:pointer;border:1px solid transparent}.btn-gold{background:#d2ad5d;color:#0a0a0a}.btn-gold:hover{background:#e4c477}.btn-outline{border-color:#555;color:#eee}.btn-outline:hover{border-color:#c9a45b;color:#d7b56a}.trust-row{display:flex;gap:35px;margin-top:55px}.trust-row div{display:flex;flex-direction:column}.trust-row strong{font-family:"Playfair Display";font-size:1.4rem;color:#e1c27b}.trust-row span{font-size:.72rem;color:#777;text-transform:uppercase;letter-spacing:.1em}.hero-card{border:1px solid #343434;border-radius:14px;background:#111;box-shadow:0 30px 90px rgba(0,0,0,.5);overflow:hidden;transform:rotate(1deg)}.browser-top{height:45px;border-bottom:1px solid #2c2c2c;display:flex;align-items:center;padding:0 14px;gap:7px;color:#777;font-size:.7rem}.browser-top i{width:8px;height:8px;background:#444;border-radius:50%}.browser-top span{margin-left:10px}.mockup{min-height:480px;padding:55px 40px;background:radial-gradient(circle at 80% 20%,#493715,transparent 35%),linear-gradient(145deg,#161616,#0b0b0b)}.mock-label{color:#c9a45b;font-size:.65rem;letter-spacing:.2em}.mock-title{font-family:"Playfair Display";font-size:3.2rem;line-height:1.05;margin-top:65px}.mock-line{width:90px;border-top:2px solid #c9a45b;margin:25px 0}.mock-btn{display:inline-block;border:1px solid #c9a45b;padding:11px 17px;font-size:.7rem;letter-spacing:.12em}.section{padding:105px 7%;border-top:1px solid #181818}.section-head{max-width:720px;margin-bottom:50px}.section h2{font-family:"Playfair Display";font-size:clamp(2.2rem,4vw,4rem);line-height:1.08}.section-head>p:last-child{color:#888;margin-top:17px}.services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.service{background:#0f0f0f;border:1px solid #252525;padding:30px;min-height:230px;transition:.3s}.service:hover{transform:translateY(-5px);border-color:#8f6c2f}.icon{color:#d7b56a;font-size:1.8rem;margin-bottom:35px}.service h3{font-size:1.1rem;margin-bottom:10px}.service p,.project p,.price-card .muted,.steps p{color:#838383;font-size:.9rem}.portfolio-grid{display:grid;grid-template-columns:1.2fr .8fr;grid-template-rows:250px 250px;gap:18px}.project{position:relative;overflow:hidden;border:1px solid #292929;padding:28px;display:flex;align-items:end;background:#151515}.project:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 75% 25%,#9a712f55,transparent 35%)}.project>div{position:relative;z-index:1}.project span{font-size:.65rem;letter-spacing:.16em;color:#d3ae5e}.project h3{font-family:"Playfair Display";font-size:2rem}.project a{font-size:.75rem;color:#bbb}.project-one{grid-row:span 2;background:linear-gradient(135deg,#111,#302410)}.project-two{background:linear-gradient(135deg,#111,#201d17)}.project-three{background:linear-gradient(135deg,#111,#171b1b)}.demo-note,.price-note{color:#666;font-size:.75rem;margin-top:18px}.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.price-card{background:#0f0f0f;border:1px solid #2a2a2a;padding:35px;position:relative}.price-card.featured{border-color:#a77c32;box-shadow:0 20px 60px rgba(165,121,45,.08)}.popular{position:absolute;top:0;right:0;background:#c9a45b;color:#090909;padding:6px 12px;font-size:.6rem;font-weight:800;letter-spacing:.1em}.plan{color:#c9a45b;font-size:.7rem;letter-spacing:.18em;font-weight:800}.price-card h3{font-family:"Playfair Display";font-size:2.5rem;margin:10px 0}.price-card ul{list-style:none;margin:25px 0}.price-card li{padding:8px 0;border-bottom:1px solid #222;color:#aaa;font-size:.85rem}.price-card li:before{content:"✓";color:#c9a45b;margin-right:9px}.price-card .btn{width:100%}.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.steps div{border-top:1px solid #393939;padding-top:20px}.steps b{color:#c9a45b;font-family:"Playfair Display";font-size:1.2rem}.steps h3{margin:20px 0 8px}.contact{background:#0c0c0c}.contact-box{border:1px solid #292929;background:#101010;padding:55px;display:grid;grid-template-columns:1fr 1fr;gap:60px}.contact-box h2{font-family:"Playfair Display";font-size:3.4rem;line-height:1.05}.contact-box>div>p:last-child{color:#888;margin-top:20px;max-width:450px}.contact form{display:grid;gap:12px}.contact input,.contact textarea{width:100%;background:#090909;border:1px solid #303030;color:#fff;padding:14px;border-radius:5px;font:inherit;outline:none}.contact textarea{min-height:130px;resize:vertical}.contact input:focus,.contact textarea:focus{border-color:#9d7738}.contact small{color:#c9a45b}footer{padding:35px 7%;border-top:1px solid #222;display:flex;justify-content:space-between;gap:20px;align-items:center;color:#777;font-size:.75rem}footer .brand{color:#eee;font-size:1.05rem}@media(max-width:900px){nav{display:none}.menu-btn{display:block}.hero{grid-template-columns:1fr;padding-top:70px}.hero-card{max-width:600px}.services-grid,.pricing-grid{grid-template-columns:repeat(2,1fr)}.portfolio-grid{grid-template-columns:1fr;grid-template-rows:repeat(3,240px)}.project-one{grid-row:auto}.steps{grid-template-columns:repeat(2,1fr)}.contact-box{grid-template-columns:1fr}}@media(max-width:600px){.nav{padding:0 5%}.hero,.section{padding-left:5%;padding-right:5%}.hero h1{font-size:3.1rem}.trust-row{gap:18px}.mockup{min-height:350px}.mock-title{font-size:2.4rem;margin-top:40px}.services-grid,.pricing-grid,.steps{grid-template-columns:1fr}.contact-box{padding:30px 20px}.contact-box h2{font-size:2.4rem}footer{flex-direction:column;align-items:flex-start}}
+/* =========================================================
+   GOLDCRAFT WEB STUDIO
+   Main Stylesheet
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #080808;
+    color: #f5f2eb;
+    font-family: Inter, Arial, sans-serif;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   NAVIGATION
+========================================================= */
+
+.nav {
+    height: 78px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 7%;
+    border-bottom: 1px solid #222;
+    position: sticky;
+    top: 0;
+    background: rgba(8, 8, 8, .92);
+    backdrop-filter: blur(14px);
+    z-index: 100;
+}
+
+.brand {
+    font-family: "Playfair Display", serif;
+    font-weight: 800;
+    font-size: 1.35rem;
+    letter-spacing: .3px;
+}
+
+.brand span {
+    display: inline-grid;
+    place-items: center;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #c9a45b;
+    border-radius: 50%;
+    color: #d7b56a;
+    margin-right: 7px;
+    font-size: .95rem;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    font-size: .9rem;
+    color: #bbb;
+}
+
+nav a {
+    transition: .25s ease;
+}
+
+nav a:hover {
+    color: #d7b56a;
+}
+
+.nav-cta {
+    border: 1px solid #8f6c2f;
+    padding: 10px 17px;
+    border-radius: 999px;
+    color: #e4c477;
+}
+
+.menu-btn {
+    display: none;
+    background: none;
+    border: 0;
+    color: #fff;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    min-height: calc(100vh - 78px);
+    padding: 90px 7%;
+    display: grid;
+    grid-template-columns: 1.08fr .92fr;
+    gap: 60px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-glow {
+    position: absolute;
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    background: #8d682b;
+    filter: blur(140px);
+    opacity: .12;
+    right: -180px;
+    top: 40px;
+}
+
+.eyebrow {
+    font-size: .72rem;
+    letter-spacing: .2em;
+    color: #caa65b;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(3rem, 6vw, 6.3rem);
+    line-height: 1.02;
+    max-width: 780px;
+}
+
+.hero h1 em {
+    color: #d7b56a;
+    font-style: normal;
+}
+
+.hero-copy {
+    max-width: 620px;
+    color: #a9a9a9;
+    margin: 26px 0 34px;
+    font-size: 1.08rem;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 21px;
+    border-radius: 7px;
+    font-weight: 700;
+    font-size: .88rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    transition: .25s ease;
+}
+
+.btn-gold {
+    background: #d2ad5d;
+    color: #0a0a0a;
+}
+
+.btn-gold:hover {
+    background: #e4c477;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: #555;
+    color: #eee;
+}
+
+.btn-outline:hover {
+    border-color: #c9a45b;
+    color: #d7b56a;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TRUST
+========================================================= */
+
+.trust-row {
+    display: flex;
+    gap: 35px;
+    margin-top: 55px;
+}
+
+.trust-row div {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-row strong {
+    font-family: "Playfair Display";
+    font-size: 1.4rem;
+    color: #e1c27b;
+}
+
+.trust-row span {
+    font-size: .72rem;
+    color: #777;
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+
+/* =========================================================
+   HERO CARD
+========================================================= */
+
+.hero-card {
+    border: 1px solid #343434;
+    border-radius: 14px;
+    background: #111;
+    box-shadow: 0 30px 90px rgba(0, 0, 0, .5);
+    overflow: hidden;
+    transform: rotate(1deg);
+}
+
+.browser-top {
+    height: 45px;
+    border-bottom: 1px solid #2c2c2c;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    gap: 7px;
+    color: #777;
+    font-size: .7rem;
+}
+
+.browser-top i {
+    width: 8px;
+    height: 8px;
+    background: #444;
+    border-radius: 50%;
+}
+
+.browser-top span {
+    margin-left: 10px;
+}
+
+.mockup {
+    min-height: 480px;
+    padding: 55px 40px;
+    background:
+        radial-gradient(circle at 80% 20%, #493715, transparent 35%),
+        linear-gradient(145deg, #161616, #0b0b0b);
+}
+
+.mock-label {
+    color: #c9a45b;
+    font-size: .65rem;
+    letter-spacing: .2em;
+}
+
+.mock-title {
+    font-family: "Playfair Display";
+    font-size: 3.2rem;
+    line-height: 1.05;
+    margin-top: 65px;
+}
+
+.mock-line {
+    width: 90px;
+    border-top: 2px solid #c9a45b;
+    margin: 25px 0;
+}
+
+.mock-btn {
+    display: inline-block;
+    border: 1px solid #c9a45b;
+    padding: 11px 17px;
+    font-size: .7rem;
+    letter-spacing: .12em;
+}
+
+
+/* =========================================================
+   SECTIONS
+========================================================= */
+
+.section {
+    padding: 105px 7%;
+    border-top: 1px solid #181818;
+}
+
+.section-head {
+    max-width: 720px;
+    margin-bottom: 50px;
+}
+
+.section h2 {
+    font-family: "Playfair Display";
+    font-size: clamp(2.2rem, 4vw, 4rem);
+    line-height: 1.08;
+}
+
+.section-head > p:last-child {
+    color: #888;
+    margin-top: 17px;
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.service {
+    background: #0f0f0f;
+    border: 1px solid #252525;
+    padding: 30px;
+    min-height: 230px;
+    transition: .3s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    border-color: #8f6c2f;
+}
+
+.icon {
+    color: #d7b56a;
+    font-size: 1.8rem;
+    margin-bottom: 35px;
+}
+
+.service h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.service p,
+.project p,
+.price-card .muted,
+.steps p {
+    color: #838383;
+    font-size: .9rem;
+}
+
+
+/* =========================================================
+   PORTFOLIO
+========================================================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    grid-template-rows: 250px 250px;
+    gap: 18px;
+}
+
+.project {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #292929;
+    padding: 28px;
+    display: flex;
+    align-items: end;
+    background: #151515;
+    transition: .3s ease;
+}
+
+.project:hover {
+    transform: translateY(-4px);
+    border-color: #8f6c2f;
+}
+
+.project:before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(circle at 75% 25%, #9a712f55, transparent 35%);
+}
+
+.project > div {
+    position: relative;
+    z-index: 1;
+}
+
+.project span {
+    font-size: .65rem;
+    letter-spacing: .16em;
+    color: #d3ae5e;
+}
+
+.project h3 {
+    font-family: "Playfair Display";
+    font-size: 2rem;
+}
+
+.project a {
+    font-size: .75rem;
+    color: #bbb;
+}
+
+.project a:hover {
+    color: #d7b56a;
+}
+
+.project-one {
+    grid-row: span 2;
+    background: linear-gradient(135deg, #111, #302410);
+}
+
+.project-two {
+    background: linear-gradient(135deg, #111, #201d17);
+}
+
+.project-three {
+    background: linear-gradient(135deg, #111, #171b1b);
+}
+
+.demo-note,
+.price-note {
+    color: #666;
+    font-size: .75rem;
+    margin-top: 18px;
+}
+
+
+/* =========================================================
+   PRICING
+========================================================= */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.price-card {
+    background: #0f0f0f;
+    border: 1px solid #2a2a2a;
+    padding: 35px;
+    position: relative;
+}
+
+.price-card.featured {
+    border-color: #a77c32;
+    box-shadow: 0 20px 60px rgba(165, 121, 45, .08);
+}
+
+.popular {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #c9a45b;
+    color: #090909;
+    padding: 6px 12px;
+    font-size: .6rem;
+    font-weight: 800;
+    letter-spacing: .1em;
+}
+
+.plan {
+    color: #c9a45b;
+    font-size: .7rem;
+    letter-spacing: .18em;
+    font-weight: 800;
+}
+
+.price-card h3 {
+    font-family: "Playfair Display";
+    font-size: 2.5rem;
+    margin: 10px 0;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 25px 0;
+}
+
+.price-card li {
+    padding: 8px 0;
+    border-bottom: 1px solid #222;
+    color: #aaa;
+    font-size: .85rem;
+}
+
+.price-card li:before {
+    content: "✓";
+    color: #c9a45b;
+    margin-right: 9px;
+}
+
+.price-card .btn {
+    width: 100%;
+}
+
+
+/* =========================================================
+   PROCESS
+========================================================= */
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.steps div {
+    border-top: 1px solid #393939;
+    padding-top: 20px;
+}
+
+.steps b {
+    color: #c9a45b;
+    font-family: "Playfair Display";
+    font-size: 1.2rem;
+}
+
+.steps h3 {
+    margin: 20px 0 8px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact {
+    background: #0c0c0c;
+}
+
+.contact-box {
+    border: 1px solid #292929;
+    background: #101010;
+    padding: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.contact-box h2 {
+    font-family: "Playfair Display";
+    font-size: 3.4rem;
+    line-height: 1.05;
+}
+
+.contact-box > div > p:last-of-type {
+    color: #888;
+    margin-top: 20px;
+    max-width: 450px;
+}
+
+.contact form {
+    display: grid;
+    gap: 12px;
+}
+
+.contact input,
+.contact textarea {
+    width: 100%;
+    background: #090909;
+    border: 1px solid #303030;
+    color: #fff;
+    padding: 14px;
+    border-radius: 5px;
+    font: inherit;
+    outline: none;
+}
+
+.contact textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+    border-color: #9d7738;
+}
+
+.contact small {
+    color: #c9a45b;
+}
+
+
+/* =========================================================
+   DIRECT CONTACT BUTTONS
+========================================================= */
+
+.direct-contact {
+    display: grid;
+    gap: 12px;
+    margin-top: 30px;
+    max-width: 450px;
+}
+
+.direct-btn {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 18px;
+    border: 1px solid #303030;
+    border-radius: 8px;
+    transition: .25s ease;
+}
+
+.direct-btn > span {
+    font-size: 1.5rem;
+}
+
+.direct-btn div {
+    display: flex;
+    flex-direction: column;
+}
+
+.direct-btn strong {
+    font-size: .9rem;
+}
+
+.direct-btn small {
+    color: #888;
+    margin-top: 2px;
+}
+
+.whatsapp-btn {
+    border-color: #245c3a;
+}
+
+.whatsapp-btn:hover {
+    background: rgba(37, 211, 102, .08);
+    border-color: #25d366;
+    transform: translateY(-2px);
+}
+
+.email-btn:hover {
+    background: rgba(215, 181, 106, .07);
+    border-color: #c9a45b;
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   FORM SUCCESS / ERROR
+========================================================= */
+
+#formMsg {
+    min-height: 22px;
+    line-height: 1.5;
+}
+
+.form-success {
+    color: #25d366 !important;
+}
+
+.form-error {
+    color: #ff7777 !important;
+}
+
+
+/* =========================================================
+   FLOATING CONTACT BUTTONS
+========================================================= */
+
+.floating-contact {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 90;
+}
+
+.floating-contact a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-width: 125px;
+    padding: 11px 15px;
+    border-radius: 30px;
+    color: white;
+    font-size: .78rem;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, .35);
+    transition: .25s ease;
+}
+
+.floating-contact a:hover {
+    transform: translateY(-3px);
+}
+
+.floating-whatsapp {
+    background: #25d366;
+}
+
+.floating-email {
+    background: #202020;
+    border: 1px solid #555;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    padding: 35px 7%;
+    border-top: 1px solid #222;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: center;
+    color: #777;
+    font-size: .75rem;
+}
+
+footer .brand {
+    color: #eee;
+    font-size: 1.05rem;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        display: none;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 70px;
+    }
+
+    .hero-card {
+        max-width: 600px;
+    }
+
+    .services-grid,
+    .pricing-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 240px);
+    }
+
+    .project-one {
+        grid-row: auto;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+        padding: 0 5%;
+    }
+
+    .hero,
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h1 {
+        font-size: 3.1rem;
+    }
+
+    .hero-copy {
+        font-size: 1rem;
+    }
+
+    .trust-row {
+        gap: 18px;
+    }
+
+    .mockup {
+        min-height: 350px;
+    }
+
+    .mock-title {
+        font-size: 2.4rem;
+        margin-top: 40px;
+    }
+
+    .services-grid,
+    .pricing-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 30px 20px;
+    }
+
+    .contact-box h2 {
+        font-size: 2.4rem;
+    }
+
+    .floating-contact {
+        right: 12px;
+        bottom: 12px;
+    }
+
+    .floating-contact a {
+        min-width: 112px;
+        padding: 10px 12px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
