@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <meta name="description" content="GoldCraft Web Studio creates premium, modern and mobile-friendly websites for businesses, brands and professionals.">
-
 <meta name="keywords" content="web design Pakistan, website development Pakistan, business website, website designer, GoldCraft Web Studio">
-
 <meta name="author" content="GoldCraft Web Studio">
 
 <title>GoldCraft Web Studio | Premium Websites</title>
@@ -18,7 +15,900 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="style.css">
+<style>
+
+:root {
+    --bg: #0b0b0b;
+    --bg2: #111111;
+    --card: #151515;
+    --gold: #d4af60;
+    --gold2: #e4c477;
+    --text: #f5f5f5;
+    --muted: #a8a8a8;
+    --line: #2d2d2d;
+    --green: #25d366;
+    --red: #ff7777;
+    --max: 1180px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Inter, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+/* ================= NAVIGATION ================= */
+
+.nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 78px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background: rgba(11, 11, 11, 0.94);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(12px);
+}
+
+.brand {
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.brand span {
+    color: var(--gold);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 14px;
+    color: #ddd;
+    transition: 0.2s;
+}
+
+nav a:hover {
+    color: var(--gold2);
+}
+
+.nav-cta {
+    padding: 10px 17px;
+    border: 1px solid var(--gold);
+    border-radius: 7px;
+    color: var(--gold2) !important;
+}
+
+.menu-btn {
+    display: none;
+    border: 0;
+    background: none;
+    color: white;
+    font-size: 27px;
+}
+
+/* ================= HERO ================= */
+
+.hero {
+    max-width: var(--max);
+    min-height: 650px;
+    margin: auto;
+
+    padding: 100px 7% 90px;
+
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: 65px;
+
+    position: relative;
+}
+
+.hero-glow {
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    left: -150px;
+    top: 80px;
+
+    background: rgba(212, 175, 96, 0.07);
+
+    filter: blur(90px);
+
+    pointer-events: none;
+}
+
+.eyebrow {
+    color: var(--gold2);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+    line-height: 1.12;
+}
+
+h1 {
+    font-size: clamp(46px, 6vw, 76px);
+    max-width: 760px;
+}
+
+h1 em {
+    color: var(--gold2);
+    font-style: normal;
+}
+
+.hero-copy {
+    max-width: 650px;
+    color: var(--muted);
+    margin: 24px 0 30px;
+    font-size: 17px;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 48px;
+
+    padding: 12px 21px;
+
+    border-radius: 7px;
+    border: 1px solid transparent;
+
+    font-weight: 700;
+    font-size: 14px;
+
+    transition: 0.2s;
+}
+
+.btn-gold {
+    background: var(--gold);
+    color: #090909;
+}
+
+.btn-gold:hover {
+    background: var(--gold2);
+    transform: translateY(-1px);
+}
+
+.btn-outline {
+    border-color: #555;
+    color: #fff;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    border-color: var(--gold);
+    color: var(--gold2);
+}
+
+.trust-row {
+    display: flex;
+    gap: 42px;
+    margin-top: 42px;
+}
+
+.trust-row div {
+    display: flex;
+    flex-direction: column;
+}
+
+.trust-row strong {
+    font-size: 22px;
+}
+
+.trust-row span {
+    font-size: 12px;
+    color: var(--muted);
+}
+
+/* ================= HERO CARD ================= */
+
+.hero-card {
+    border: 1px solid #343434;
+    background: #0f0f0f;
+    border-radius: 13px;
+    overflow: hidden;
+
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.browser-top {
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 0 17px;
+
+    border-bottom: 1px solid #282828;
+}
+
+.browser-top i {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: #555;
+}
+
+.browser-top span {
+    margin-left: auto;
+    color: #777;
+    font-size: 11px;
+}
+
+.mockup {
+    min-height: 390px;
+    padding: 55px 42px;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(212, 175, 96, 0.18),
+            transparent 35%
+        ),
+        linear-gradient(145deg, #171717, #0c0c0c);
+}
+
+.mock-label {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--gold2);
+}
+
+.mock-title {
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 42px;
+    line-height: 1.05;
+    margin: 20px 0;
+}
+
+.mock-line {
+    height: 1px;
+    background: #333;
+    margin: 26px 0;
+    width: 80%;
+}
+
+.mock-btn {
+    display: inline-block;
+
+    border: 1px solid var(--gold);
+    color: var(--gold2);
+
+    padding: 10px 15px;
+
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+/* ================= GENERAL SECTIONS ================= */
+
+.section {
+    max-width: var(--max);
+    margin: auto;
+    padding: 90px 7%;
+}
+
+.section-head {
+    max-width: 760px;
+    margin-bottom: 45px;
+}
+
+.section-head h2 {
+    font-size: clamp(35px, 4vw, 54px);
+}
+
+.section-head > p:last-child {
+    color: var(--muted);
+    margin-top: 14px;
+}
+
+/* ================= SERVICES ================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.service {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 27px 22px;
+}
+
+.icon {
+    font-size: 25px;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    font-size: 22px;
+    margin-bottom: 11px;
+}
+
+.service p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio {
+    max-width: none;
+    background: #0f0f0f;
+}
+
+.portfolio > .section-head,
+.portfolio > .portfolio-grid,
+.portfolio > .demo-note {
+    max-width: var(--max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.project {
+    min-height: 320px;
+
+    border: 1px solid #333;
+    border-radius: 11px;
+
+    padding: 28px;
+
+    display: flex;
+    align-items: flex-end;
+
+    overflow: hidden;
+
+    position: relative;
+}
+
+.project::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background: linear-gradient(135deg, #27221a, #111);
+
+    opacity: 0.9;
+}
+
+.project-two::before {
+    background: linear-gradient(135deg, #201b23, #111);
+}
+
+.project-three::before {
+    background: linear-gradient(135deg, #1b2226, #111);
+}
+
+.project > div {
+    position: relative;
+    z-index: 1;
+}
+
+.project span {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: var(--gold2);
+}
+
+.project h3 {
+    font-size: 34px;
+    margin: 8px 0 14px;
+}
+
+.project a {
+    font-size: 13px;
+    color: #ddd;
+}
+
+.project a:hover {
+    color: var(--gold2);
+}
+
+.demo-note,
+.price-note {
+    color: #777;
+    font-size: 12px;
+    margin-top: 18px;
+}
+
+/* ================= PRICING ================= */
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 17px;
+}
+
+.price-card {
+    position: relative;
+
+    border: 1px solid var(--line);
+    background: var(--card);
+
+    border-radius: 11px;
+
+    padding: 30px 25px;
+}
+
+.price-card.featured {
+    border-color: var(--gold);
+}
+
+.popular {
+    position: absolute;
+
+    top: -12px;
+    right: 18px;
+
+    background: var(--gold);
+    color: #111;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    padding: 5px 9px;
+
+    border-radius: 5px;
+}
+
+.plan {
+    color: var(--gold2);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.price-card h3 {
+    font-size: 37px;
+    margin: 13px 0;
+}
+
+.muted {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+.price-card ul {
+    list-style: none;
+    margin: 23px 0;
+}
+
+.price-card li {
+    font-size: 14px;
+    color: #ddd;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #222;
+}
+
+.price-card li::before {
+    content: "✓";
+    color: var(--gold);
+    margin-right: 9px;
+}
+
+.price-card .btn {
+    width: 100%;
+    margin-top: 5px;
+}
+
+/* ================= PROCESS ================= */
+
+.process {
+    background: #0f0f0f;
+    max-width: none;
+}
+
+.process > .section-head,
+.steps {
+    max-width: var(--max);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.steps > div {
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.steps b {
+    color: var(--gold);
+    font-size: 13px;
+}
+
+.steps h3 {
+    font-size: 23px;
+    margin: 9px 0;
+}
+
+.steps p {
+    color: var(--muted);
+    font-size: 14px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.contact-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 55px;
+
+    background: var(--card);
+
+    border: 1px solid var(--line);
+    border-radius: 14px;
+
+    padding: 45px;
+}
+
+.contact h2 {
+    font-size: clamp(37px, 4vw, 54px);
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: var(--muted);
+}
+
+/* Direct contact buttons */
+
+.direct-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 28px;
+}
+
+.direct-btn {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 14px;
+
+    border: 1px solid #333;
+    border-radius: 8px;
+
+    background: #101010;
+}
+
+.direct-btn:hover {
+    border-color: #555;
+}
+
+.direct-btn span {
+    font-size: 21px;
+}
+
+.direct-btn strong {
+    display: block;
+    font-size: 13px;
+}
+
+.direct-btn small {
+    color: #888;
+}
+
+.whatsapp-btn:hover {
+    border-color: var(--green);
+}
+
+.email-btn:hover {
+    border-color: var(--gold);
+}
+
+/* Contact form */
+
+#contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contactForm input:not([type="checkbox"]),
+#contactForm textarea {
+    width: 100%;
+
+    background: #0b0b0b;
+    color: #fff;
+
+    border: 1px solid #333;
+    border-radius: 7px;
+
+    padding: 15px;
+
+    outline: none;
+
+    transition: 0.2s;
+}
+
+#contactForm input:not([type="checkbox"]):focus,
+#contactForm textarea:focus {
+    border-color: var(--gold);
+
+    box-shadow:
+        0 0 0 2px rgba(212, 175, 96, 0.08);
+}
+
+#contactForm textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+#contactForm button {
+    width: 100%;
+    border: 0;
+}
+
+#formMsg {
+    display: block;
+
+    min-height: 22px;
+
+    margin-top: 2px;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.form-success {
+    color: var(--green) !important;
+}
+
+.form-error {
+    color: var(--red) !important;
+}
+
+.form-sending {
+    color: var(--gold2) !important;
+}
+
+button:disabled {
+    opacity: 0.65;
+    cursor: not-allowed;
+}
+
+/* ================= FLOATING CONTACT ================= */
+
+.floating-contact {
+    position: fixed;
+
+    right: 18px;
+    bottom: 18px;
+
+    z-index: 999;
+
+    display: flex;
+    gap: 8px;
+}
+
+.floating-contact a {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 11px 14px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.35);
+}
+
+.floating-whatsapp {
+    background: var(--green);
+    color: #07130a;
+}
+
+.floating-email {
+    background: #222;
+    color: #fff;
+    border: 1px solid #444;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    border-top: 1px solid #222;
+
+    padding: 32px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+footer p {
+    color: #777;
+    font-size: 12px;
+}
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+        padding-top: 75px;
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid,
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contact-box {
+        grid-template-columns: 1fr;
+        padding: 30px;
+    }
+}
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 600px) {
+
+    .nav {
+        padding: 0 5%;
+    }
+
+    .hero,
+    .section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero {
+        padding-top: 60px;
+    }
+
+    h1 {
+        font-size: 45px;
+    }
+
+    .hero-copy {
+        font-size: 15px;
+    }
+
+    .trust-row {
+        gap: 20px;
+    }
+
+    .mockup {
+        padding: 40px 25px;
+        min-height: 300px;
+    }
+
+    .mock-title {
+        font-size: 34px;
+    }
+
+    .services-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-box {
+        padding: 24px;
+    }
+
+    .floating-contact {
+        right: 10px;
+        bottom: 10px;
+    }
+
+    .floating-contact a {
+        padding: 10px 12px;
+    }
+
+    .floating-contact strong {
+        display: none;
+    }
+
+    footer {
+        padding: 28px 5%;
+    }
+}
+
+</style>
 </head>
 
 <body>
@@ -31,7 +921,10 @@
         <span>G</span> GoldCraft
     </a>
 
-    <button class="menu-btn" aria-label="Open menu">
+    <button
+        class="menu-btn"
+        aria-label="Open menu"
+        aria-expanded="false">
         ☰
     </button>
 
@@ -56,7 +949,9 @@
 
     <div class="hero-content">
 
-        <p class="eyebrow">PREMIUM WEB DESIGN STUDIO</p>
+        <p class="eyebrow">
+            PREMIUM WEB DESIGN STUDIO
+        </p>
 
         <h1>
             Websites that make your business look
@@ -76,7 +971,7 @@
             </a>
 
             <a href="#contact" class="btn btn-outline">
-                Start a Project <span>→</span>
+                Start a Project →
             </a>
 
         </div>
@@ -142,7 +1037,9 @@
 
     <div class="section-head">
 
-        <p class="eyebrow">WHAT WE DO</p>
+        <p class="eyebrow">
+            WHAT WE DO
+        </p>
 
         <h2>
             Everything your business needs online.
@@ -162,7 +1059,9 @@
 
             <div class="icon">✦</div>
 
-            <h3>Business Websites</h3>
+            <h3>
+                Business Websites
+            </h3>
 
             <p>
                 Professional websites that present your company,
@@ -176,7 +1075,9 @@
 
             <div class="icon">◈</div>
 
-            <h3>Landing Pages</h3>
+            <h3>
+                Landing Pages
+            </h3>
 
             <p>
                 Focused pages built to turn advertising and
@@ -190,7 +1091,9 @@
 
             <div class="icon">◇</div>
 
-            <h3>E-commerce</h3>
+            <h3>
+                E-commerce
+            </h3>
 
             <p>
                 Clean online stores for products, collections,
@@ -204,7 +1107,9 @@
 
             <div class="icon">↗</div>
 
-            <h3>Redesigns</h3>
+            <h3>
+                Redesigns
+            </h3>
 
             <p>
                 Transform an outdated website into a modern,
@@ -224,7 +1129,9 @@
 
     <div class="section-head">
 
-        <p class="eyebrow">SELECTED WORK</p>
+        <p class="eyebrow">
+            SELECTED WORK
+        </p>
 
         <h2>
             Built to impress. Designed to convert.
@@ -239,9 +1146,13 @@
 
             <div>
 
-                <span>RESTAURANT</span>
+                <span>
+                    RESTAURANT
+                </span>
 
-                <h3>Maison Noir</h3>
+                <h3>
+                    Maison Noir
+                </h3>
 
                 <a href="#contact">
                     Build something like this →
@@ -256,9 +1167,13 @@
 
             <div>
 
-                <span>FASHION BRAND</span>
+                <span>
+                    FASHION BRAND
+                </span>
 
-                <h3>Velora</h3>
+                <h3>
+                    Velora
+                </h3>
 
                 <a href="#contact">
                     Build something like this →
@@ -273,9 +1188,13 @@
 
             <div>
 
-                <span>REAL ESTATE</span>
+                <span>
+                    REAL ESTATE
+                </span>
 
-                <h3>Prime Estates</h3>
+                <h3>
+                    Prime Estates
+                </h3>
 
                 <a href="#contact">
                     Build something like this →
@@ -301,7 +1220,9 @@
 
     <div class="section-head">
 
-        <p class="eyebrow">SIMPLE PACKAGES</p>
+        <p class="eyebrow">
+            SIMPLE PACKAGES
+        </p>
 
         <h2>
             Choose the right starting point.
@@ -315,9 +1236,13 @@
 
         <article class="price-card">
 
-            <p class="plan">STARTER</p>
+            <p class="plan">
+                STARTER
+            </p>
 
-            <h3>Rs. 15,000</h3>
+            <h3>
+                Rs. 15,000
+            </h3>
 
             <p class="muted">
                 For individuals and small businesses.
@@ -330,10 +1255,13 @@
                 <li>Basic animations</li>
             </ul>
 
-            <a href="#contact"
-               class="btn btn-outline package-btn"
-               data-package="Starter">
+            <a
+                href="#contact"
+                class="btn btn-outline package-btn"
+                data-package="Starter">
+
                 Choose Starter
+
             </a>
 
         </article>
@@ -349,7 +1277,9 @@
                 PROFESSIONAL
             </p>
 
-            <h3>Rs. 30,000</h3>
+            <h3>
+                Rs. 30,000
+            </h3>
 
             <p class="muted">
                 For businesses ready to grow online.
@@ -363,10 +1293,13 @@
                 <li>Basic support</li>
             </ul>
 
-            <a href="#contact"
-               class="btn btn-gold package-btn"
-               data-package="Professional">
+            <a
+                href="#contact"
+                class="btn btn-gold package-btn"
+                data-package="Professional">
+
                 Choose Professional
+
             </a>
 
         </article>
@@ -378,7 +1311,9 @@
                 BUSINESS PRO
             </p>
 
-            <h3>Rs. 50,000+</h3>
+            <h3>
+                Rs. 50,000+
+            </h3>
 
             <p class="muted">
                 For larger brands and advanced needs.
@@ -392,10 +1327,13 @@
                 <li>Priority support</li>
             </ul>
 
-            <a href="#contact"
-               class="btn btn-outline package-btn"
-               data-package="Business Pro">
+            <a
+                href="#contact"
+                class="btn btn-outline package-btn"
+                data-package="Business Pro">
+
                 Choose Business Pro
+
             </a>
 
         </article>
@@ -489,9 +1427,8 @@
             </p>
 
 
-            <!-- Direct contact -->
-
             <div class="direct-contact">
+
 
                 <a
                     href="https://wa.me/923260936969?text=Hi%20GoldCraft%20Web%20Studio%2C%20I%20am%20interested%20in%20your%20website%20services."
@@ -502,8 +1439,15 @@
                     <span>💬</span>
 
                     <div>
-                        <strong>Chat on WhatsApp</strong>
-                        <small>+92 326 0936969</small>
+
+                        <strong>
+                            Chat on WhatsApp
+                        </strong>
+
+                        <small>
+                            +92 326 0936969
+                        </small>
+
                     </div>
 
                 </a>
@@ -516,20 +1460,57 @@
                     <span>✉</span>
 
                     <div>
-                        <strong>Email GoldCraft</strong>
-                        <small>goldcraftweb@gmail.com</small>
+
+                        <strong>
+                            Email GoldCraft
+                        </strong>
+
+                        <small>
+                            goldcraftweb@gmail.com
+                        </small>
+
                     </div>
 
                 </a>
+
 
             </div>
 
         </div>
 
 
-        <!-- Project form -->
+        <!-- ================= CUSTOMER FORM ================= -->
 
-<form id="contactForm">      <input type="hidden" name="access_key" value="4eb2420c-7073-4cbb-bf39-24911919bbef">      <input type="hidden" name="subject" value="New GoldCraft Website Project Request">      <input type="hidden" name="from_name" value="GoldCraft Web Studio">      <input type="checkbox" name="botcheck" style="display:none">      <input type="text" name="name" placeholder="Your name" required>      <input type="email" name="email" placeholder="Your email" required>      <input type="text" name="business" placeholder="Business / website type" required>      <textarea name="message" placeholder="Tell us about your project" required></textarea>      <button class="btn btn-gold" type="submit">Send Project Request →</button>      <small id="formMsg"></small>  </form>
+        <form id="contactForm">
+
+            <!-- Web3Forms -->
+
+            <input
+                type="hidden"
+                name="access_key"
+                value="fa04cdf4-5720-4379-a336-a9973263aa65">
+
+            <input
+                type="hidden"
+                name="subject"
+                value="New GoldCraft Website Project Request">
+
+            <input
+                type="hidden"
+                name="from_name"
+                value="GoldCraft Web Studio">
+
+
+            <!-- Spam protection -->
+
+            <input
+                type="checkbox"
+                name="botcheck"
+                style="display:none">
+
+
+            <!-- Customer name -->
+
             <input
                 type="text"
                 name="name"
@@ -537,6 +1518,8 @@
                 autocomplete="name"
                 required>
 
+
+            <!-- Customer email -->
 
             <input
                 type="email"
@@ -546,6 +1529,8 @@
                 required>
 
 
+            <!-- Business -->
+
             <input
                 type="text"
                 name="business"
@@ -553,11 +1538,15 @@
                 required>
 
 
+            <!-- Project details -->
+
             <textarea
                 name="message"
                 placeholder="Tell us about your project"
                 required></textarea>
 
+
+            <!-- Submit -->
 
             <button
                 class="btn btn-gold"
@@ -567,6 +1556,8 @@
 
             </button>
 
+
+            <!-- Success / error message -->
 
             <small id="formMsg"></small>
 
@@ -583,6 +1574,7 @@
 
 <div class="floating-contact">
 
+
     <a
         href="https://wa.me/923260936969?text=Hi%20GoldCraft%20Web%20Studio%2C%20I%20want%20to%20discuss%20a%20website%20project."
         class="floating-whatsapp"
@@ -592,7 +1584,9 @@
 
         <span>💬</span>
 
-        <strong>WhatsApp</strong>
+        <strong>
+            WhatsApp
+        </strong>
 
     </a>
 
@@ -604,9 +1598,12 @@
 
         <span>✉</span>
 
-        <strong>Email</strong>
+        <strong>
+            Email
+        </strong>
 
     </a>
+
 
 </div>
 
@@ -632,7 +1629,251 @@
 </footer>
 
 
-<script src="script.js"></script>
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+
+    /* ================= YEAR ================= */
+
+    const yearElement = document.getElementById("year");
+
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+
+
+    /* ================= MOBILE MENU ================= */
+
+    const menuBtn = document.querySelector(".menu-btn");
+    const nav = document.querySelector("nav");
+
+    if (menuBtn && nav) {
+
+        menuBtn.addEventListener("click", function () {
+
+            const isOpen =
+                nav.classList.toggle("mobile-open");
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen ? "true" : "false"
+            );
+
+            if (isOpen) {
+
+                nav.style.display = "flex";
+                nav.style.position = "absolute";
+                nav.style.top = "78px";
+                nav.style.left = "0";
+                nav.style.right = "0";
+                nav.style.padding = "22px 7%";
+                nav.style.background = "#0b0b0b";
+                nav.style.flexDirection = "column";
+                nav.style.alignItems = "flex-start";
+                nav.style.gap = "18px";
+                nav.style.borderBottom = "1px solid #292929";
+
+            } else {
+
+                nav.style.display = "";
+                nav.removeAttribute("style");
+
+            }
+
+        });
+
+
+        document.querySelectorAll("nav a").forEach(function (link) {
+
+            link.addEventListener("click", function () {
+
+                if (window.innerWidth <= 900) {
+
+                    nav.classList.remove("mobile-open");
+
+                    nav.style.display = "";
+
+                    nav.removeAttribute("style");
+
+                    menuBtn.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+                }
+
+            });
+
+        });
+
+    }
+
+
+    /* ================= PACKAGE BUTTONS ================= */
+
+    document.querySelectorAll(".package-btn").forEach(function (button) {
+
+        button.addEventListener("click", function () {
+
+            const packageName =
+                button.getAttribute("data-package");
+
+            const message =
+                document.querySelector(
+                    'textarea[name="message"]'
+                );
+
+            if (message) {
+
+                message.value =
+                    "I am interested in the " +
+                    packageName +
+                    " package. Please tell me more about the package and the next steps.";
+
+            }
+
+        });
+
+    });
+
+
+    /* ================= WEB3FORMS ================= */
+
+    const contactForm =
+        document.getElementById("contactForm");
+
+    const formMsg =
+        document.getElementById("formMsg");
+
+
+    if (contactForm) {
+
+        contactForm.addEventListener(
+            "submit",
+            async function (event) {
+
+                event.preventDefault();
+
+
+                const submitButton =
+                    contactForm.querySelector(
+                        'button[type="submit"]'
+                    );
+
+
+                const originalText =
+                    submitButton.textContent;
+
+
+                submitButton.disabled = true;
+
+                submitButton.textContent =
+                    "Sending...";
+
+
+                formMsg.textContent =
+                    "Sending your project request...";
+
+                formMsg.className =
+                    "form-sending";
+
+
+                try {
+
+                    const formData =
+                        new FormData(contactForm);
+
+
+                    const response =
+                        await fetch(
+                            "https://api.web3forms.com/submit",
+                            {
+                                method: "POST",
+
+                                headers: {
+                                    "Accept":
+                                        "application/json"
+                                },
+
+                                body: formData
+                            }
+                        );
+
+
+                    const result =
+                        await response.json();
+
+
+                    console.log(
+                        "Web3Forms response:",
+                        result
+                    );
+
+
+                    if (
+                        response.ok &&
+                        result.success
+                    ) {
+
+                        formMsg.textContent =
+                            "✓ Your project request was sent successfully! We will contact you soon.";
+
+                        formMsg.className =
+                            "form-success";
+
+
+                        contactForm.reset();
+
+
+                    } else {
+
+                        formMsg.textContent =
+                            "✕ " +
+                            (
+                                result.message ||
+                                "Your request could not be sent. Please try again."
+                            );
+
+                        formMsg.className =
+                            "form-error";
+
+                    }
+
+
+                } catch (error) {
+
+                    console.error(
+                        "Form submission error:",
+                        error
+                    );
+
+
+                    formMsg.textContent =
+                        "✕ Connection error. Please try again or contact us on WhatsApp.";
+
+                    formMsg.className =
+                        "form-error";
+
+                }
+
+
+                submitButton.disabled =
+                    false;
+
+                submitButton.textContent =
+                    originalText;
+
+            }
+        );
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
