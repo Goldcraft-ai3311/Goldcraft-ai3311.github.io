@@ -854,3 +854,30 @@ footer .brand {
         align-items: flex-start;
     }
 }
+
+.form-success {
+    display: block;
+    margin-top: 14px;
+    color: #25d366 !important;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.form-error {
+    display: block;
+    margin-top: 14px;
+    color: #ff7777 !important;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.form-sending {
+    display: block;
+    margin-top: 14px;
+    color: #d4af60 !important;
+    font-weight: 600;
+}
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
